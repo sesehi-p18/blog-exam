@@ -16,13 +16,11 @@ class DefaultController extends AbstractController
         ]);
     }
 
-    #[Route('/historique', name: 'app_historique')]
-    public function historique(): Response
+    #[Route('/propos', name: 'app_propos')]
+    public function propos(): Response
     {
-        $prenom = 'Hervé';
-        return $this->render('default/historique.html.twig', [
-            'controller_name' => 'DefaultController',
-            'prenom' => $prenom,
+        return $this->render('default/apropos.html.twig', [
+            'controller_name' => 'DefaultController'
         ]);
     }
 }
